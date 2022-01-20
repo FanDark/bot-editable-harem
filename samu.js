@@ -252,7 +252,7 @@ message: {
 "mimetype": "image/jpeg",             
 "jpegThumbnail": fs.readFileSync(`./src/fake.jpg`)           
 },                                
-"title": `Bienvenido a ${mdata.subject}`,
+"title": `Hola plebeyo, bienvenido a ${mdata.subject}`,
 "description": "",                
 "currencyCode": "SYP",                  
 "priceAmount1000": "999999999999999999",
@@ -260,16 +260,16 @@ message: {
 "productImageCount": 999
 },                          
 "businessOwnerJid": `0@s.whatsapp.net`
-}}}, caption: `😙Hola, @${num.split('@')[0]}, _*Bienvenido a ${mdata.subject}, esperamos que te la pases a gusto en este grupo✨*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, contextInfo: { mentionedJid: [num] }})
+}}}, caption: `😙Hola, @${num.split('@')[0]}, _*Bienvenido a ${mdata.subject}, esperamos que te la pases a gusto en este grupo🌊*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, contextInfo: { mentionedJid: [num] }})
 } catch {
-samu330.sendMessage(mdata.id, `😙Hola, @${num.split('@')[0]}, _*Bienvenido a ${mdata.subject}, esperamos que te la pases a gusto en este grupo✨*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, MessageType.text)
+samu330.sendMessage(mdata.id, `😙Hola, @${num.split('@')[0]}, _*Bienvenido a ${mdata.subject}, esperamos que te la pases a gusto en este grupo🌊*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, MessageType.text)
 }
 //leave
 }  else if (anu.action == 'remove') {
 num = anu.participants[0]
-teks = `_Weno ps.... amm😪...  @${num.split('@')[0]} se nos fue, ni llorar es bueno:)_
-_*Ojala y le baya bien, y mas despues..... que lo atropelle un tren!!🚉🤣*_
-*No se awiten gente, esten seguros que nadie lo extrañara:D*`
+teks = `_Muchas gracias por estar aquí  @${num.split('@')[0]} ni modo, adíos plebeyo 💙_
+_*c va a tomar un té*_
+*Le da un pancito a cada uno*`
 samu330.sendMessage(mdata.id, teks, MessageType.text,{ contextInfo: {"mentionedJid": [num]}})
 
 } else if (anu.action == 'promote') {
@@ -291,7 +291,7 @@ ppimg = await samu330.getProfilePicture(`${num.split('@')[0]}@c.us`)
 ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 }
 thu = await samu330.getStatus(anu.participants[0], MessageType.text)
-teks = `*❌UN ADMIN MENOS❌*\n*🙋🏻‍♂️ Nombre*: @${num.split('@')[0]}\n*📋 INFO*: ${thu.status}\n\n*😪Nimodos, ya no eres admnistrador del grupo* ${mdata.subject}`
+teks = `*❌UN ADMIN MENOS❌*\n*🙋🏻‍♂️ Nombre*: @${num.split('@')[0]}\n*📋 INFO*: ${thu.status}\n\n*Lo sentimos, ya no eres admnistrador del grupo* ${mdata.subject}`
 let buff = await getBuffer(ppimg)
 samu330.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 }
@@ -1082,11 +1082,7 @@ ${bodyM} ${samu}${prefix}welcome${samu}
 ${bodyM} ${samu}${prefix}antigp${samu}
 _Para prohibir los links de otros grupos_
     
-    ================================
-    *🔞PARA ACTIVAR LOS COMANDOS +18*:
-    ================================
-    ${bodyM} ${prefix}+18 1/0
-    ================================
+   
         _Modo simsimi ilimitado_
     
 *${prefix}simsimi 1*
@@ -1559,8 +1555,8 @@ sendButMessage(from, `*Si no ves la lista de comandos, o no puedes hacer click e
 
 let newmenu = samu330.prepareMessageFromContent(from, {
 "listMessage":  {
-"title": "*✍🏻MENU | 🌬NyanBot | SAMU330🪀*",
-"description": `\n➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙😈.li Oℱịcιɑl.li
+"title": "*🌀𝑬.𝑯.𝑫. 𝑵𝒐𝒆𝒍𝒍𝒆 𝑺𝒊𝒍𝒗𝒂🌀*",
+"description": `\Grupo de Black Clover donde adoramos a la diosa de Noelle pero casi no hablamos de ella jeje, diviertete y socializa junto a los demás querido plebeyo 😎
 🔐Hola *${pushname}* ${timeFt}
 _Tipo de usuario:_ ${tipoDeUsr}
 ┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -1662,7 +1658,7 @@ ${opcion}`,
 			if (sam.message.buttonsResponseMessage){
 				test = sam.message.buttonsResponseMessage.selectedButtonId
 				if (test.includes(`mnan`)){
-				sendButLocation(from, `\n➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙😈.li Oℱịcιɑl.li
+				sendButLocation(from, `\Grupo de Black Clover donde adoramos a la diosa de Noelle pero casi no hablamos de ella jeje, diviertete y socializa junto a los demás querido plebeyo 😎
 🔐Hola *${pushname}* ${timeFt}
 _Tipo de usuario:_ ${tipoDeUsr}
 ┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -1825,73 +1821,7 @@ var _0x4dab=["\x6C\x69\x73\x74\x52\x65\x73\x70\x6F\x6E\x73\x65\x4D\x65\x73\x73\x
 
 
 
-			if (sam.message.listResponseMessage){
-				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
-				if (test.includes(`+18`)){
-					addFilter(from)
-					addLevelingLevel(sender, 5)		
-					samu330.sendMessage(from, { degreesLatitude: `0`, degreesLongitude: `0`, name: '🔥Samu330 | NyanBot🍒', address : `🗡Created by Samu330`, sequenceNumber: '99999', jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, MessageType.liveLocation, {quoted : sam})
-					let nopor = samu330.prepareMessageFromContent(from, {
-					"listMessage":  {
-					"title": "*😏Bienvenido al menu 6*",
-					"description": `\n\nQue es lo que buscas🍒?\n\n	*Si no puedes ver, o selccionar la lsita de mensajes de abajo, desactiva la opcion de "Hacer el texto seleccionable", en las configuraciones de conversacion de tu WhatsApp Mod.*`,
-					"buttonText": "Click Aqui",
-					"listType": "SINGLE_SELECT",
-					"sections": [
-					{
-					"rows": [
-					{
-					"title": "Imagenes Filtradas De la Hermosa Belle Delphine😏!!",
-					"rowId": `${prefix}belle`
-					},
-					{
-					"title": "🍑VIDEO UNICO Y EXCLUSIVO PARA LOS USUARIOS DE NYANBOT👑✍🏻",
-					"rowId": `VIP`
-					},	
-					{
-					"title": `Porno Real🔥`,
-					"rowId": `${prefix}porno`
-					},
-					{
-					"title": "Porno de Lesbianas😊",
-					"rowId": `${prefix}lesbian`
-					},
-					{
-						"title": `Bonitas Tetas🍇`,
-						"rowId": `${prefix}tetas`
-						},
-						{
-						"title": "Culos Hermosos🍑",
-						"rowId": `${prefix}ass`
-						},
-						{
-							"title": `Pussy's🥟`,
-							"rowId": `${prefix}pussy`
-							},
-							{
-							"title": "Waifu Hentai🌸",
-							"rowId": `${prefix}xwaifu`
-							},
-							{
-								"title": "Neko Hentai🍒",
-								"rowId": `${prefix}xneko`
-								},
-								{
-								"title": "Trap Hentai🍌",
-								"rowId": `${prefix}trap`
-								},
-								{
-									"title": "Blow Hentai🍆",
-									"rowId": `${prefix}blow`
-									}
-					]
-					}
-					]
-					}
-					}, {})
-					samu330.relayWAMessage(nopor, {waitForAck: true})
-			}
-			}
+			
             if (sam.message.listResponseMessage){
 				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
 				if (test.includes(`juegos`)){
@@ -2094,7 +2024,7 @@ gracias =
 	//Zona de Comandos🛵
 switch (command) {
 
-case 'help':
+case 'ayuda':
 case 'menu':
 case 'comandos':
 reply(`*EL MENU CAMBIO, AHORA PARA PEDIR EL MENU USA EL STICKER QUE SE ENVIARA A CONTINUACION.*
@@ -2106,7 +2036,7 @@ break
 
 case 'menuofc':
 
-redes = ['*Sigeme y te sigo en instagram!* https://www.instagram.com/samu330wabot', '*😊Seamos amigos en facebook!!* https://www.facebook.com/samu330wabot']
+redes = ['*Siguenos en Facebook* https://www.facebook.com/ElharemdeNoelle', '*😊También en nuestro Instagram!!* https://www.instagram.com/elharemde_noelle/']
 opcion = redes[Math.floor(Math.random() * redes.length)]
 
 var num = sam.participant
@@ -2117,10 +2047,10 @@ const forder = { key : {fromMe: false,participant : "0@s.whatsapp.net", ...(from
 samu330.updatePresence(from, Presence.recording)
 uptime = process.uptime()
 		
-if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: noreg, caption: `😊Hola, ${timeFt}.\n*Yo soy Sam330*, Asistente de *Samu330*!.\n\nAl parecer no estas registrado en _*NyanBot*_, Para registrarte usa el comando: *${prefix}reg*.`, thumbnail: assistant, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
+if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: noreg, caption: `😊Hola, ${timeFt}.\n*Yo soy Fuja*, Asistente de *E.H.D Noelle Silva*!.\n\nAl parecer no estas registrado en _*NyanBot*_, Para registrarte usa el comando: *${prefix}reg*.`, thumbnail: assistant, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 try {		
 Menu = `
-➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙😈.li Oℱịcιɑl.li
+🌀𝑬.𝑯.𝑫. 𝑵𝒐𝒆𝒍𝒍𝒆 𝑺𝒊𝒍𝒗𝒂🌀
 🔐Hola *${pushname}* ${timeFt}
 
 _Tipo de usuario:_ ${tipoDeUsr}
@@ -2130,13 +2060,13 @@ _Tipo de usuario:_ ${tipoDeUsr}
 🕋rango: ${rango}
 ┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-🌹ڰۣڿڰۣڿஇღԑ̮̑ঙღڰۣڿڰۣڿஇ🌹
+🌀𝑬.𝑯.𝑫. 𝑵𝒐𝒆𝒍𝒍𝒆 𝑺𝒊𝒍𝒗𝒂🌀
 
 _Si quieres saber como crear este bot, usa el comando:_
 
 ${prefix}crear
 
-🌹ڰۣڿڰۣڿஇღԑ̮̑ঙღڰۣڿڰۣڿஇ🌹
+🌀𝑬.𝑯.𝑫. 𝑵𝒐𝒆𝒍𝒍𝒆 𝑺𝒊𝒍𝒗𝒂🌀
 
 🕐Son las *${hora}*\n\n🍃Hoy es *${week1}  ${calender1}*
 
@@ -2167,9 +2097,8 @@ ${samu} ✏Prefijo:${samu} [ ${prefix} ]
 ${samu} 🕐Tiempo de actividad:${samu} *${uptime}*
 ${samu} ✅Modo:${samu} *ON*
 ${samu} 👥Grupo:${samu} *${groupName}*
-${samu} 🏆Numero del Dueño wa.link/wpnz32${samu}
+${samu} 🏆Numero del Dueño +51917099011${samu}
 
-𝗠𝗬 𝗖𝗔𝗡𝗔𝗟 𝗗𝗘 𝗬𝗢𝗨𝗧𝗨.𝗕𝗘: shrtco.de/CanalDeSamu
 
 ⍣ *BOT INFO* ⍣
 ${samu}◦ 🌐Navegador :${samu} *${samu330.browserDescription[1]}*
@@ -2194,9 +2123,7 @@ ${bodyM} ${prefix}menu1 *(Menu de Media*
 ${bodyM} ${prefix}menu2 *(Menu de Sticker)*
 ${bodyM} ${prefix}menu3 *(Menu de Grupos)*
 ${bodyM} ${prefix}menu4 *(Menu de descargas)*
-${bodyM} ${prefix}menu5 *(Comandos Tools)*
-${bodyM} ${prefix}menu6 *(Comandos +18)* 
-${bodyM} ${prefix}menu7 *(Comandos de logos)*
+${bodyM} ${prefix}menu5 *(Comandos Tools)* 
 ${bodyM} ${prefix}menu8 *(Comandos para el Owner)*
 ${bodyM} ${prefix}menu9 *(Comandos para explotar grupos)*
 ${bodyM} ${prefix}audios *(Audios)*
